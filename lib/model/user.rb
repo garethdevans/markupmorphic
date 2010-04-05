@@ -1,4 +1,4 @@
-class Customer
+class User
   attr_accessor :email, :file_name
                 
   def initialize(email, file_name)
