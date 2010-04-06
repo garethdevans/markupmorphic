@@ -1,0 +1,25 @@
+<form method="post" action="user\create">
+
+<%
+    if @user.errors.count > 0 then
+%>
+        <ul>
+<%
+            @user.errors.each do |key, value|
+%>
+                <li><%= value %></li>
+<%
+            end
+%>
+        </ul>
+<%
+    end
+%>
+      
+    <label for="first_name" text="First name"></label><input type="text" name="first_name" value=<%= @user.first_name %> />
+    <label for="last_name" text="Last name"></label><input type="text" name="last_name" value=<%= @user.last_name %> />
+    <label for="email" text="Email Address"></label><input type="text" name="email" value=<%= @user.email %> />
+    <label for="password" text="Password"></label><input type="password" name="password" />
+    <input type="submit" text="Create" />
+
+</form>
