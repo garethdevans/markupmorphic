@@ -1,0 +1,25 @@
+<form method="post" action="user/login">
+
+<%
+   if @user.errors.count > 0 then
+%>
+        <ul>
+<%
+            @user.errors.each do |key, value|
+%>
+                <li><%= value %></li>
+<%
+            end
+%>
+        </ul>
+<%
+    end
+%>
+      
+    <label for="email">Email Address</label><input type="text" id="email" name="email" value="<%= @user.email %>" />
+    <label for="password">Password</label><input type="password" id="password" name="password" />
+    <input type="submit" id="login" name="login" value="Login" />
+  
+    <a href="user/create">Register new account here</a>
+
+</form>

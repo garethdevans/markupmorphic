@@ -1,0 +1,48 @@
+# Logfile created on Thu Apr 08 02:11:04 +0100 2010 by logger.rb/22285
+D, [2010-04-08T02:11:04.258951 #3296] DEBUG -- : REQUESTING PAGE: GET /add with {} and HTTP headers {}
+D, [2010-04-08T02:11:04.271842 #3296] DEBUG -- : REQUESTING PAGE: POST /add with {"second"=>"70", "first"=>"50"} and HTTP headers {"HTTP_REFERER"=>"/add"}
+D, [2010-04-08T02:14:27.821891 #3323] DEBUG -- : REQUESTING PAGE: GET /add with {} and HTTP headers {}
+D, [2010-04-08T02:14:27.831033 #3323] DEBUG -- : REQUESTING PAGE: POST /add with {"second"=>"70", "first"=>"50"} and HTTP headers {"HTTP_REFERER"=>"/add"}
+D, [2010-04-08T08:55:33.655820 #2680] DEBUG -- : REQUESTING PAGE: GET /add with {} and HTTP headers {}
+D, [2010-04-08T09:01:44.257906 #2900] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:02:18.042192 #2907] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:05:13.652539 #3010] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:11:20.464967 #3245] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:11:43.246556 #3248] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:11:56.567472 #3251] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:12:23.851613 #3254] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:12:30.290717 #3257] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:16:25.933386 #3360] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:17:25.366320 #3514] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:18:01.968218 #3571] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:19:39.444684 #3629] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:20:08.666401 #3687] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:21:00.744350 #3762] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:21:40.844648 #3766] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:22:58.677191 #3862] DEBUG -- : REQUESTING PAGE: GET /z with {} and HTTP headers {}
+D, [2010-04-08T09:23:25.678732 #3935] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:25:45.839280 #4084] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:27:43.371965 #4176] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:28:02.059151 #4255] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:29:06.715848 #4384] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T09:30:15.220348 #4509] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:30:39.288812 #4591] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:34:13.317418 #4743] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:34:36.480347 #4794] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:35:27.847503 #4890] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:36:49.741580 #5032] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:37:06.760158 #5097] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:37:46.959014 #5195] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T09:38:31.149212 #5281] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T10:09:32.610169 #5660] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T10:21:13.581211 #5932] DEBUG -- : REQUESTING PAGE: GET /test with {} and HTTP headers {}
+D, [2010-04-08T10:21:37.751027 #5991] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T10:21:37.759932 #5991] DEBUG -- : REQUESTING PAGE: POST user/login with {nil=>"wrong password"} and HTTP headers {"HTTP_REFERER"=>"/home"}
+D, [2010-04-08T10:23:01.378673 #6071] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T10:23:01.387665 #6071] DEBUG -- : REQUESTING PAGE: POST user/login with {nil=>"wrong password", "login"=>"Login"} and HTTP headers {"HTTP_REFERER"=>"/home"}
+D, [2010-04-08T10:23:34.685130 #6130] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T10:23:34.694066 #6130] DEBUG -- : REQUESTING PAGE: POST user/login with {nil=>"wrong password", "login"=>"Login"} and HTTP headers {"HTTP_REFERER"=>"/home"}
+D, [2010-04-08T10:26:38.709056 #6214] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T10:26:38.718032 #6214] DEBUG -- : REQUESTING PAGE: POST user/login with {"login"=>"Login", "password"=>"wrong password", "email"=>"aaa@bbb.com"} and HTTP headers {"HTTP_REFERER"=>"/home"}
+D, [2010-04-08T10:28:59.943996 #6281] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-08T10:28:59.952969 #6281] DEBUG -- : REQUESTING PAGE: POST user/login with {"login"=>"Login", "password"=>"wrong password", "email"=>"aaa@bbb.com"} and HTTP headers {"HTTP_REFERER"=>"/home"}

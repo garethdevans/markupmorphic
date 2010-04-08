@@ -1,9 +1,11 @@
-class User
-  attr_accessor :email, :file_name
-                
-  def initialize(email, file_name)
-    @email = email
-    @file_name = file_name
-  end
-  
-end               
+require 'rubygems'
+require 'couchrest'
+
+class User < CouchRest::ExtendedDocument
+    property :first_name
+    property :last_name
+    property :email
+    property :password
+
+    view_by :email
+end
