@@ -1,43 +1,51 @@
 require 'rubygems'
 require File.join(File.dirname(__FILE__), '..', 'model', 'user')
+require File.join(File.dirname(__FILE__), '..', 'repository', 'user_repository')
 
 class UserValidator
 
   attr_accessor :email, :password, :first_name, :last_name, :errors
 
-  def initialize(email = nil, password = nil, first_name = nil, last_name = nil, user_repository = UserRepository.new)
-    @email = email
-    @password = password
-    @first_name = first_name
-    @last_name = last_name
-    @is_valid = false
-    @errors = {}
+  def initialize(user_repository = UserRepository.new)
     @user_repository = user_repository
+    @errors = {}
   end
 
   public
-  def validate_login
-    @is_valid = email_is_valid? && password_is_valid?
+  def setup(params)
+    @email = params[:email]
+    @password = params[:password]
+    @first_name = params[:first_name]
+    @last_name = params[:last_name]
+    @is_valid = false
+  end
 
-    if(@is_valid) then
-      email_password_match = @user_repository.check(email, password)
-    else
-      email_password_match = nil
-    end
-
+  def validate_login(params)
+    setup(params)
+    @is_valid = check(email, password)
     @errors.clear
     add_email_error()
     add_password_error()
-    add_email_password_match_error(email_password_match)
+    add_email_password_match_error(@is_valid) if email_is_valid? && password_is_valid?
   end
 
-  def validate_registration
-    @is_valid = email_is_valid? && password_is_valid? && first_name_is_valid? && last_name_is_valid?
+  def check(email, password)
+    email_is_valid? && password_is_valid? && @user_repository.check(email, password)
+  end
+
+  def user_does_not_exist?
+    email_is_valid? && @user_repository.find_by_email(@email).nil?
+  end
+
+  def validate_registration(params)
+    setup(params)
+    @is_valid = email_is_valid? && password_is_valid? && first_name_is_valid? && last_name_is_valid? && user_does_not_exist?()
     @errors.clear
     add_email_error()
     add_password_error()
     add_first_name_error()
     add_last_name_error()
+    add_user_does_not_exist() if email_is_valid?
   end
 
   def bind(user = User.new)
@@ -45,6 +53,7 @@ class UserValidator
     user.password = @password
     user.first_name = @first_name
     user.last_name = @last_name
+    user.errors = @errors
     user
   end
 
@@ -56,20 +65,24 @@ class UserValidator
   def add_email_password_match_error(match)
     @errors.merge!({:email => "Email and password do not match"}) if !match.nil? && !match
   end
-  def add_email_error()
+  def add_email_error
     @errors.merge!({:email => "Please enter a valid email address"}) if !email_is_valid?
   end
 
-  def add_password_error()
+  def add_password_error
     @errors.merge!({:password => "Password must be at least 8 characters"}) if !password_is_valid?
   end
 
-  def add_first_name_error()
+  def add_first_name_error
     @errors.merge!({:first_name => "Please enter your first name"}) if !password_is_valid?
   end
 
-  def add_last_name_error()
+  def add_last_name_error
     @errors.merge!({:last_name => "Please enter your last name"}) if !password_is_valid?
+  end
+
+  def add_user_does_not_exist
+    @errors.merge!({:user_exists => "Email address already in use"}) if !user_does_not_exist?    
   end
 
   def email_regex_check

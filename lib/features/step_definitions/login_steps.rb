@@ -2,6 +2,10 @@ Given /^I visit the home page$/ do
   visit '/home'
 end
 
+Given /^I visit the register page$/ do
+  visit '/user/create'
+end
+
 Given /^I fill in '(.*)' for '(.*)'$/ do |value, field|
   fill_in(field, :with => value)
 end

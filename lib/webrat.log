@@ -46,3 +46,13 @@ D, [2010-04-08T10:26:38.709056 #6214] DEBUG -- : REQUESTING PAGE: GET /home with
 D, [2010-04-08T10:26:38.718032 #6214] DEBUG -- : REQUESTING PAGE: POST user/login with {"login"=>"Login", "password"=>"wrong password", "email"=>"aaa@bbb.com"} and HTTP headers {"HTTP_REFERER"=>"/home"}
 D, [2010-04-08T10:28:59.943996 #6281] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
 D, [2010-04-08T10:28:59.952969 #6281] DEBUG -- : REQUESTING PAGE: POST user/login with {"login"=>"Login", "password"=>"wrong password", "email"=>"aaa@bbb.com"} and HTTP headers {"HTTP_REFERER"=>"/home"}
+D, [2010-04-09T05:10:43.205623 #2617] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {}
+D, [2010-04-09T05:19:22.336144 #2793] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T07:31:11.872222 #4492] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T07:36:49.416676 #4683] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T07:37:23.724619 #4722] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T07:37:23.735333 #4722] DEBUG -- : REQUESTING PAGE: POST create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-09T07:38:31.755674 #4800] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T07:38:31.766254 #4800] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-09T07:43:10.232247 #5019] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T07:43:10.242787 #5019] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}

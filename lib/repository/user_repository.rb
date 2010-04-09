@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'env'
 require 'digest/sha1'
 
 class Repository

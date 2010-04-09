@@ -38,7 +38,7 @@ class Main < Sinatra::Base
   post '/user/create' do
     user_validator.validate_registration(params)
     @user = user_validator.bind
-    if user_validator.is_valid? && !user_service.exists(@user) then
+    if user_validator.is_valid? then
       user_service.save(@user)
       session["user"] = @user
       redirect '/home'
@@ -49,7 +49,8 @@ class Main < Sinatra::Base
 
   get '/home' do
     @user = get_user()
-    erb :home
+    "Welcome"
+    #erb :home
   end
 
   private
