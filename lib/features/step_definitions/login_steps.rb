@@ -1,3 +1,10 @@
+require File.join(File.dirname(__FILE__), '..', '..', '..', 'lib', 'repository', 'user_repository')
+
+Given /^The system is setup$/ do
+  @user_repository = UserRepository.new
+  @user_repository.setup_database!
+end
+
 Given /^I visit the home page$/ do
   visit '/home'
 end

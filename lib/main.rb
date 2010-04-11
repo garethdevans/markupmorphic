@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sinatra/base'
 require 'erb'
-require 'rack'
 
 require File.join(File.dirname(__FILE__), 'validation', 'user_validator')
 require File.join(File.dirname(__FILE__), 'model', 'user')
@@ -15,16 +14,16 @@ class Main < Sinatra::Base
     @user_validator = user_validator
   end
 
-  def user_service
-    @user_service ||= UserService.new
+  def user_repository
+    @user_repository ||= UserRepository.new
   end
-  def user_service=(user_service)
-    @user_service = user_service
+  def user_repository=(user_repository)
+    @user_repository = user_repository
   end
 
   post '/user/login' do
     user_validator.validate_login(params)
-    if user_validator.is_valid? && user_service.password_correct() then
+    if user_validator.is_valid? then
       session["user"] = user_validator.bind
     end
     redirect '/home'
@@ -39,7 +38,7 @@ class Main < Sinatra::Base
     user_validator.validate_registration(params)
     @user = user_validator.bind
     if user_validator.is_valid? then
-      user_service.save(@user)
+      user_repository.save(@user)
       session["user"] = @user
       redirect '/home'
     else

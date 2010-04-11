@@ -4,7 +4,8 @@ Feature: Login
   I want to be able to login on the home page
 
   Scenario: Create a new user
-    Given I visit the register page
+    Given The system is setup
+    And I visit the register page
     And I fill in 'Bob' for 'first_name'
     And I fill in 'Smith' for 'last_name'
     And I fill in 'bob.smith@lotsofmoney.com' for 'email'

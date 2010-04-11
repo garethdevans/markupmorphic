@@ -56,3 +56,28 @@ D, [2010-04-09T07:38:31.755674 #4800] DEBUG -- : REQUESTING PAGE: GET /user/crea
 D, [2010-04-09T07:38:31.766254 #4800] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
 D, [2010-04-09T07:43:10.232247 #5019] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
 D, [2010-04-09T07:43:10.242787 #5019] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-09T08:08:09.550846 #5982] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T08:08:09.561581 #5982] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-09T08:09:12.993208 #6061] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T08:09:13.003943 #6061] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-09T08:09:27.853277 #6102] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T08:09:27.863951 #6102] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-09T08:09:27.864828 #6102] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {"HTTP_REFERER"=>"user/create"}
+D, [2010-04-09T08:09:33.656813 #6142] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-09T08:09:33.669059 #6142] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-10T23:16:07.024119 #2594] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-10T23:16:07.042149 #2594] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T04:47:42.161377 #2475] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-11T04:47:42.172133 #2475] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T04:50:01.160737 #2545] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-11T04:50:01.171202 #2545] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T04:53:02.680327 #2723] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-11T04:53:02.691181 #2723] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T10:08:20.004818 #6351] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-11T10:08:20.015325 #6351] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T10:22:37.320066 #6575] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-11T10:22:37.330622 #6575] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T10:22:37.339407 #6575] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {"HTTP_REFERER"=>"user/create"}
+D, [2010-04-11T10:22:52.324962 #6579] DEBUG -- : REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+D, [2010-04-11T10:22:52.335665 #6579] DEBUG -- : REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+D, [2010-04-11T10:22:52.347170 #6579] DEBUG -- : REQUESTING PAGE: GET /home with {} and HTTP headers {"HTTP_REFERER"=>"user/create"}
