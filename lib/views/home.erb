@@ -4,6 +4,7 @@
 <%
     if @user.is_logged_in? then
 %>
+        <a href='user/logout'>Sign out</a>
         <%= erb(:upload, :layout => false) %>
 <%
     else

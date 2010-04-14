@@ -15,7 +15,11 @@ class User < CouchRest::ExtendedDocument
     def errors
       @errors ||= {}
     end
+
     def is_logged_in?
-      return false
+      @is_logged_in
+    end
+    def login
+      @is_logged_in = true
     end
 end

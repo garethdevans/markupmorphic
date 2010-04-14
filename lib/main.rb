@@ -21,15 +21,25 @@ class Main < Sinatra::Base
     @user_repository = user_repository
   end
 
+
   post '/user/login' do
     user_validator.validate_login(params)
     if user_validator.is_valid? then
-      session["user"] = user_validator.bind
+      @user = user_repository.find_by_email(params[:email])
+      @user.login
+      session["user_id"] = @user.id
     end
+    puts "session:" + session.to_s
+    redirect '/home'
+  end
+  
+
+  get '/user/logout' do
+    session["user_id"] = nil
     redirect '/home'
   end
 
-  get '/user/create' do                          
+  get '/user/create' do
     @user = User.new
     erb :register
   end
@@ -39,7 +49,8 @@ class Main < Sinatra::Base
     @user = user_validator.bind
     if user_validator.is_valid? then
       user_repository.save(@user)
-      session["user"] = @user
+      @user.login
+      session["user_id"] = @user.id
       redirect '/home'
     else
       erb :register
@@ -47,19 +58,23 @@ class Main < Sinatra::Base
   end
 
   get '/home' do
+    puts "session:" + session.to_s
     @user = get_user()
-    "Welcome"
-    #erb :home
+    erb :home
   end
 
   private
   def authenticate
-    if session["user"].nil?
+    if session["user_id"].nil?
       redirect '/home'
     end
   end
 
   def get_user
-    session["user"].nil? ? User.new : session["user"]
+    get_id().nil? ? User.new : user_repository.get_user(get_id())
+  end
+
+  def get_id
+    return session["user_id"] if !session["user_id"].nil?
   end
 end

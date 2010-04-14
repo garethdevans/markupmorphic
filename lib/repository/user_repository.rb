@@ -26,5 +26,11 @@ class UserRepository < Repository
       end
   end
 
+  def get_user(id)
+    if user = User.get(id, @db)
+        user.database = @db
+    end
+    user
+  end
 end
 

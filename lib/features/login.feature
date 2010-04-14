@@ -1,7 +1,7 @@
-Feature: Login
+Feature: User
   In order to use the system
   As a normal user
-  I want to be able to login on the home page
+  I want to be able to create a new user and login
 
   Scenario: Create a new user
     Given The system is setup
@@ -11,12 +11,14 @@ Feature: Login
     And I fill in 'bob.smith@lotsofmoney.com' for 'email'
     And I fill in 'password' for 'password'
     When I press 'register'
-    Then I should see 'Welcome'
+    Then I should see 'Sign out'
+
+  Scenario: Login with new user
+    Given User id exists for 'bob.smith@lotsofmoney.com'
+    And I visit the home page
+    And I fill in 'bob.smith@lotsofmoney.com' for 'email'
+    And I fill in 'password' for 'password'
+    When I press 'login'
+    Then I should see 'Sign out'
 
 
-#  Scenario: Login on home page fails when
-#    Given I visit the home page
-#    And I fill in 'aaa@bbb.com' for 'email'
-#    And I fill in 'wrong password' for 'password'
-#    When I press 'login'
-#    Then I should see 'User or password incorrect'
