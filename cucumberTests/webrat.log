@@ -1,5 +1,0 @@
-# Logfile created on Thu Apr 08 02:11:04 +0100 2010 by logger.rb/22285
-D, [2010-04-08T02:11:04.258951 #3296] DEBUG -- : REQUESTING PAGE: GET /add with {} and HTTP headers {}
-D, [2010-04-08T02:11:04.271842 #3296] DEBUG -- : REQUESTING PAGE: POST /add with {"second"=>"70", "first"=>"50"} and HTTP headers {"HTTP_REFERER"=>"/add"}
-D, [2010-04-08T02:14:27.821891 #3323] DEBUG -- : REQUESTING PAGE: GET /add with {} and HTTP headers {}
-D, [2010-04-08T02:14:27.831033 #3323] DEBUG -- : REQUESTING PAGE: POST /add with {"second"=>"70", "first"=>"50"} and HTTP headers {"HTTP_REFERER"=>"/add"}
