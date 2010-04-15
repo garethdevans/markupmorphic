@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 require 'rack'
-require 'main'
 
 use Rack::Session::Cookie, :key => 'rack.session',
                           :path => '/',
@@ -13,4 +12,13 @@ log = File.new("log/sinatra.log", "a")
 $stdout.reopen(log)
 $stderr.reopen(log)
 
-Main.run! :host => 'localhost', :port => 4567
+
+root_dir = File.dirname(__FILE__)
+require File.join(root_dir, 'main')
+
+set :environment, :production
+set :root,  root_dir
+set :app_file, File.join(root_dir, 'main.rb')
+disable :run
+
+run Markupmorphic::Main

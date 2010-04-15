@@ -1,0 +1,138 @@
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_id
+NameError - undefined local variable or method `endUser' for #<Markupmorphic::Main:0x7f628556d968>:
+ ./main.rb:33:in `get_user'
+ ./main.rb:47:in `GET /'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `route'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `instance_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `route_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:500:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:497:in `catch'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:497:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:476:in `each'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:476:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:601:in `dispatch!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:411:in `call!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `instance_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `invoke'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `catch'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `invoke'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:411:in `call!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:399:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:979:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:1005:in `synchronize'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:979:in `call'
+ /var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/session/cookie.rb:37:in `call'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:118:in `run'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:65:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:58:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:41:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:159:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+ /usr/lib/phusion_passenger/passenger-spawn-server:61
+session:user_id
+NameError - undefined local variable or method `endUser' for #<Markupmorphic::Main:0x7f6285561e88>:
+ ./main.rb:33:in `get_user'
+ ./main.rb:47:in `GET /'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `route'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `instance_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `route_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:500:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:497:in `catch'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:497:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:476:in `each'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:476:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:601:in `dispatch!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:411:in `call!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `instance_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `invoke'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `catch'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `invoke'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:411:in `call!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:399:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:979:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:1005:in `synchronize'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:979:in `call'
+ /var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/session/cookie.rb:37:in `call'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:118:in `run'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:65:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:58:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:41:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:159:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+ /usr/lib/phusion_passenger/passenger-spawn-server:61
+session:user_id
+NameError - undefined local variable or method `endUser' for #<Markupmorphic::Main:0x7f6285556718>:
+ ./main.rb:33:in `get_user'
+ ./main.rb:47:in `GET /'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `route'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `instance_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `route_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:500:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:497:in `catch'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:497:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:476:in `each'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:476:in `route!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:601:in `dispatch!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:411:in `call!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `instance_eval'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `invoke'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `catch'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:566:in `invoke'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:411:in `call!'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:399:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:979:in `call'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:1005:in `synchronize'
+ /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:979:in `call'
+ /var/lib/gems/1.8/gems/rack-1.1.0/lib/rack/session/cookie.rb:37:in `call'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:118:in `run'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:65:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/utils.rb:184:in `safe_fork'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:58:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/rack/application_spawner.rb:41:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:159:in `spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `__send__'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
+ /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+ /usr/lib/phusion_passenger/passenger-spawn-server:61
+session:user_id
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_id
+session:user_id
+session:user_id
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_ida6cadb74bfd1999415bbef5ddf4176f8
+session:user_id
+session:user_id
+session:user_id

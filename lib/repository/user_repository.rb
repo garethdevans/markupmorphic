@@ -2,7 +2,7 @@ require 'rubygems'
 require 'couchrest'
 require 'digest/sha1'
 require File.join(File.dirname(__FILE__), 'repository')
-require File.join(File.dirname(__FILE__), '..','env')
+require File.join(File.dirname(__FILE__), '..', '..','env')
 
 class UserRepository < Repository
 

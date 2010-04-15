@@ -3,7 +3,7 @@ Feature: User
   As a normal user
   I want to be able to create a new user and login
 
-  Scenario: Create a new user
+  Scenario: Create a new user                    
     Given The system is setup
     And I visit the register page
     And I fill in 'Bob' for 'first_name'

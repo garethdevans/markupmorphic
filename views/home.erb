@@ -1,14 +1,16 @@
-<div id="fragment-1">
+<div>
 
-  <p>Welcome to HTML Love. If you register (or login for those already registered) you can upload psd files for us to turn into lovely HTML.</p>
+
 <%
     if @user.is_logged_in? then
 %>
-        <a href='user/logout'>Sign out</a>
+        <a href='/user/logout'>Sign out</a>
+        <p>Please upload a psd file for us to turn into lovely HTML.</p>
         <%= erb(:upload, :layout => false) %>
 <%
-    else
+   else
 %>
+        <p>Welcome to HTML Love. If you register (or login for those already registered) you can upload psd files for us to turn into lovely HTML.</p>  
         <%= erb(:login, :layout => false) %>
 <%
     end

@@ -2,8 +2,8 @@
 #//wiki.github.com/aslakhellesoy/cucumber/sinatra
 # for more details about Sinatra with Cucumber
 
-#app_file = File.join(File.dirname(__FILE__), *%w[.. .. main.rb])
-#require app_file
+app_file = File.join(File.dirname(__FILE__), *%w[.. .. main.rb])
+require app_file
 # Force the application name because polyglot breaks the auto-detection logic.
 #Sinatra::Application.app_file = app_file
 
@@ -46,7 +46,7 @@ class MyWorld
 end
 
 require 'firewatir'
-require File.join(File.dirname(__FILE__), '..', '..', '..', 'lib', 'env')
+require File.join(File.dirname(__FILE__), '..', '..', 'env')
 
 class MarkupWorld
     def browser
@@ -84,8 +84,8 @@ class MarkupWorldUrls
     end
 end
 
-World do
-    MarkupWorld.new
-end
+#World do
+#    MarkupWorld.new
+#end
 
-#World{MyWorld.new}
+World{MyWorld.new}

@@ -1,0 +1,7 @@
+# Logfile created on Wed Apr 14 11:31:00 +0100 2010 by logger.rb/22285
+REQUESTING PAGE: GET /user/create with {} and HTTP headers {}
+REQUESTING PAGE: POST user/create with {"last_name"=>"Smith", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com", "first_name"=>"Bob"} and HTTP headers {"HTTP_REFERER"=>"/user/create"}
+REQUESTING PAGE: GET /home with {} and HTTP headers {"HTTP_REFERER"=>"user/create"}
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: POST user/login with {"login"=>"Login", "password"=>"password", "email"=>"bob.smith@lotsofmoney.com"} and HTTP headers {"HTTP_REFERER"=>"/home"}
+REQUESTING PAGE: GET /home with {} and HTTP headers {"HTTP_REFERER"=>"user/login"}

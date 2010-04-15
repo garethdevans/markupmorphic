@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'couchrest'
-require File.join(File.dirname(__FILE__), '..','env')
+require File.join(File.dirname(__FILE__), '..', '..','env')
 
 class Repository
   def initialize

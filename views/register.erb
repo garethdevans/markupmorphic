@@ -1,4 +1,4 @@
-<form method="post" action="user/create">
+<form method="post" action="/user/create">
 
   <p>Fill in the form and hit register. An email will be sent to you to confirm your registration shortly.</p>
 
@@ -22,6 +22,6 @@
     <label for="last_name">Last name</label><input type="text" name="last_name" value="<%= @user.last_name %>" />
     <label for="email">Email address</label><input type="text" name="email" value="<%= @user.email %>" />
     <label for="password">Password</label><input type="password" name="password" />
-    <input type="submit" value="Register" />
+    <input type="submit" id="register" name="register" value="Register" />
 
 </form>
