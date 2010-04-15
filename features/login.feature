@@ -10,7 +10,7 @@ Feature: User
     And I fill in 'Smith' for 'last_name'
     And I fill in 'bob.smith@lotsofmoney.com' for 'email'
     And I fill in 'password' for 'password'
-    When I press 'register'
+    When I hit register
     Then I should see 'Sign out'
 
   Scenario: Login with new user

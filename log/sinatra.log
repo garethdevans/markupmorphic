@@ -1,17 +1,24 @@
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_id
-NameError - undefined local variable or method `endUser' for #<Markupmorphic::Main:0x7f628556d968>:
- ./main.rb:33:in `get_user'
- ./main.rb:47:in `GET /'
+RestClient::ResourceNotFound - Resource Not Found:
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/abstract_response.rb:60:in `return!'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:204:in `process_result'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:153:in `transmit'
+ /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:150:in `transmit'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:55:in `execute'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:30:in `execute'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient.rb:68:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/adapters/restclient.rb:13:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/rest_api.rb:18:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/database.rb:88:in `view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/design.rb:48:in `view_on'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:155:in `fetch_view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:145:in `fetch_view_with_docs'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:104:in `view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/extended_document.rb:124:in `method_missing'
+ ./lib/validation/../repository/user_repository.rb:17:in `find_by_email'
+ ./lib/validation/user_validator.rb:37:in `user_does_not_exist?'
+ ./lib/validation/user_validator.rb:42:in `validate_registration'
+ ./main.rb:72:in `POST /user/create'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `call'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `route'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `instance_eval'
@@ -46,10 +53,27 @@ NameError - undefined local variable or method `endUser' for #<Markupmorphic::Ma
  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
  /usr/lib/phusion_passenger/passenger-spawn-server:61
-session:user_id
-NameError - undefined local variable or method `endUser' for #<Markupmorphic::Main:0x7f6285561e88>:
- ./main.rb:33:in `get_user'
- ./main.rb:47:in `GET /'
+RestClient::ResourceNotFound - Resource Not Found:
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/abstract_response.rb:60:in `return!'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:204:in `process_result'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:153:in `transmit'
+ /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:150:in `transmit'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:55:in `execute'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:30:in `execute'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient.rb:68:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/adapters/restclient.rb:13:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/rest_api.rb:18:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/database.rb:88:in `view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/design.rb:48:in `view_on'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:155:in `fetch_view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:145:in `fetch_view_with_docs'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:104:in `view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/extended_document.rb:124:in `method_missing'
+ ./lib/validation/../repository/user_repository.rb:17:in `find_by_email'
+ ./lib/validation/user_validator.rb:37:in `user_does_not_exist?'
+ ./lib/validation/user_validator.rb:42:in `validate_registration'
+ ./main.rb:72:in `POST /user/create'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `call'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `route'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `instance_eval'
@@ -84,10 +108,27 @@ NameError - undefined local variable or method `endUser' for #<Markupmorphic::Ma
  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
  /usr/lib/phusion_passenger/passenger-spawn-server:61
-session:user_id
-NameError - undefined local variable or method `endUser' for #<Markupmorphic::Main:0x7f6285556718>:
- ./main.rb:33:in `get_user'
- ./main.rb:47:in `GET /'
+RestClient::ResourceNotFound - Resource Not Found:
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/abstract_response.rb:60:in `return!'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:204:in `process_result'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:153:in `transmit'
+ /usr/lib/ruby/1.8/net/http.rb:543:in `start'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:150:in `transmit'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:55:in `execute'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:30:in `execute'
+ /var/lib/gems/1.8/gems/rest-client-1.4.2/lib/restclient.rb:68:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/adapters/restclient.rb:13:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/rest_api.rb:18:in `get'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/database.rb:88:in `view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/core/design.rb:48:in `view_on'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:155:in `fetch_view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:145:in `fetch_view_with_docs'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/../mixins/views.rb:104:in `view'
+ /var/lib/gems/1.8/gems/couchrest-0.37/lib/couchrest/more/extended_document.rb:124:in `method_missing'
+ ./lib/validation/../repository/user_repository.rb:17:in `find_by_email'
+ ./lib/validation/user_validator.rb:37:in `user_does_not_exist?'
+ ./lib/validation/user_validator.rb:42:in `validate_registration'
+ ./main.rb:72:in `POST /user/create'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `call'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:863:in `route'
  /var/lib/gems/1.8/gems/sinatra-1.0/lib/sinatra/base.rb:521:in `instance_eval'
@@ -122,17 +163,3 @@ NameError - undefined local variable or method `endUser' for #<Markupmorphic::Ma
  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:352:in `main_loop'
  /usr/lib/ruby/1.8/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
  /usr/lib/phusion_passenger/passenger-spawn-server:61
-session:user_id
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_id
-session:user_id
-session:user_id
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_ida6cadb74bfd1999415bbef5ddf4176f8
-session:user_id
-session:user_id
-session:user_id

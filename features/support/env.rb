@@ -1,91 +1,61 @@
-# See http:ab3
-#//wiki.github.com/aslakhellesoy/cucumber/sinatra
-# for more details about Sinatra with Cucumber
-
-app_file = File.join(File.dirname(__FILE__), *%w[.. .. main.rb])
-require app_file
-# Force the application name because polyglot breaks the auto-detection logic.
-#Sinatra::Application.app_file = app_file
-
-
-
-
+require 'rubygems'
 require 'spec/expectations'
-require 'rack/builder'
-require 'rack/test'
-require 'webrat'
-
-Webrat.configure do |config|
-  config.mode = :rack
-end
-
-class MyWorld
-  include Rack::Test::Methods
-  include Webrat::Methods
-  include Webrat::Matchers
-
-  Webrat::Methods.delegate_to_session :response_code, :response_body
-
-
-  def initialize
-    @builder = Rack::Builder.new
-    @builder.use Rack::Session::Cookie, :key => 'rack.session',
-                          :path => '/',
-                          :expire_after => 60 * 60 * 12, # In seconds
-                          :secret => 'change_me'
-
-    @builder.run Main
-    @app = @builder.to_app
-  end
-  
-
-  def app
-    @app  
-  end
-
-end
-
-require 'firewatir'
 require File.join(File.dirname(__FILE__), '..', '..', 'env')
+require 'selenium'
+require 'selenium/client'
+
+# "before all"
+#manager = Selenium::ServerManager.new(Selenium::SeleniumServer.new)
+#manager.start
+browser = Selenium::SeleniumDriver.new("localhost", 4444, "*firefox", "http://markupmorphic.com/", 10000)
+
+
+Before do
+  @browsers = browser
+  @browsers.start
+end
+
+After do
+  @browsers.stop
+end
+
+# "after all"
+at_exit do
+  browser.close rescue nil
+  #manager.stop rescue nil
+end
+
 
 class MarkupWorld
-    def browser
-        $browser ||= Watir::Browser.new
-    end
-
-    def repository
-        if not @repository
-            @repository = UserRepository.new
-            @repository.setup_database!
-        end
-        @repository
-    end
-
-    def urls
-        @urls = MarkupWorldUrls.new
-    end
-end
-
-class MarkupWorldUrls
     def initialize
-        @host = 'localhost'
+      #@verification_errors = []
+      #@selenium = Selenium::SeleniumDriver.new("localhost", 4444, "*firefox", "http://markupmorphic.com/", 10000);
+      #@selenium.start
+      #@selenium.set_context("test_new")
+      @host = 'markupmorphic.com'
     end
 
-    def site_url(path)
-        "http://#{@host}:#{$env[:web_port]}/#{path}"
+    def browser
+      @browsers
     end
 
-    def signup_url
-        site_url('user/create')
+    def host
+      @host
     end
 
-    def home_url
-        site_url('')
+    def register_page
+      @register_page = RegisterPage.new(browser)  
+    end
+
+    def user_repository
+        if not @user_repository
+            @user_repository = UserRepository.new
+        end
+        @user_repository
     end
 end
 
-#World do
-#    MarkupWorld.new
-#end
+World do
+  MarkupWorld.new
+end
 
-World{MyWorld.new}
