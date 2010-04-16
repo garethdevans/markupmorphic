@@ -1,6 +1,7 @@
 require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'repository', 'user_repository')
 require File.join(File.dirname(__FILE__), '..', '..', 'env')
 
+current_page = nil
 
 Given /^The system is setup$/ do
   user_repository.delete_database!
@@ -8,11 +9,13 @@ Given /^The system is setup$/ do
 end
 
 Given /^I visit the home page$/ do
-  browser.open urls.home_url
+  home_page.open
+  current_page = home_page
 end
 
 Given /^I visit the register page$/ do
   register_page.open
+  current_page = home_page
 end
 
 Given /^User id exists for '(.*)'$/ do |email|
@@ -21,22 +24,21 @@ Given /^User id exists for '(.*)'$/ do |email|
 end
 
 Given /^I fill in '(.*)' for '(.*)'$/ do |value, field|
-  register_page.fill_in_text_field(field, value)
+  current_page.fill_in_text_field(field, value)
 end
 
 When /^I hit register$/ do
-  register_page.register_button.click_wait
-end
-
-When /^I press '(.*)'$/ do |name|
-  browser.button(:name, name).click_wait
+  @register_page.register_button.click_wait
 end
 
 Then /^I should see '(.*)'$/ do |text|
-  #response_body.should contain(/#{text}/m)
   browser.is_text_present(text).should == true
 end
 
 When /^I click the link '(.*)'$/ do |name|
   browser.click("link="+name)
+end
+
+When /^I hit 'login'$/ do
+  @home_page.login_button.click_wait
 end

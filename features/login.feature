@@ -12,13 +12,14 @@ Feature: User
     And I fill in 'password' for 'password'
     When I hit register
     Then I should see 'Sign out'
+    And I click the link 'Sign out'
 
-  Scenario: Login with new user
+  Scenario: Login with existing user
     Given User id exists for 'bob.smith@lotsofmoney.com'
     And I visit the home page
     And I fill in 'bob.smith@lotsofmoney.com' for 'email'
     And I fill in 'password' for 'password'
-    When I press 'login'
+    When I hit 'login'
     Then I should see 'Sign out'
 
 

@@ -1,9 +1,11 @@
 require 'rubygems'
 require 'couchrest'
+require 'log4r'
 require File.join(File.dirname(__FILE__), '..', '..','env')
 
 class Repository
-  def initialize
+  def initialize(logger = Log4r::Logger['MainLogger'])
+    @logger = logger
     @db = CouchRest.database($env[:couchdb_url])
   end
 
