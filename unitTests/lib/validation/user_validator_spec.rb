@@ -4,8 +4,10 @@ require File.join(File.dirname(__FILE__), '..', '..', '..', 'lib', 'validation',
 
 describe UserValidator do
   before :each do
+    @logger = stub("logger")
+    @logger.should_receive(:debug)
     @user_repository = mock("user_repository")
-    @user_validator = UserValidator.new(@user_repository)
+    @user_validator = UserValidator.new(@user_repository, @logger)
   end
 
   it "should not be valid for login when email blank" do
@@ -32,6 +34,7 @@ describe UserValidator do
     @user_validator.validate_login({:email => "aaa@bbb.com", :password => "password"})
     @user_validator.is_valid?.should == false
     @user_validator.errors.count.should == 1
+    @user_validator.errors.all? {|message| message.eql?("Email and password do not match")}
   end
 
   it "should not be valid for login when password nil" do

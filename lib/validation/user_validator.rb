@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'log4r'
 require File.join(File.dirname(__FILE__), '..', 'model', 'user')
 require File.join(File.dirname(__FILE__), '..', 'repository', 'user_repository')
 
@@ -6,21 +7,15 @@ class UserValidator
 
   attr_accessor :email, :password, :first_name, :last_name, :errors
 
-  def initialize(user_repository = UserRepository.new)
+  def initialize(user_repository = UserRepository.new, logger = Log4r::Logger['MainLogger'])
     @user_repository = user_repository
-    @errors = {}
+    @logger = logger
+    @errors = {}    
   end
 
   public
-  def setup(params)
-    @email = params[:email]
-    @password = params[:password]
-    @first_name = params[:first_name]
-    @last_name = params[:last_name]
-    @is_valid = false
-  end
-
   def validate_login(params)
+    @logger.debug("params:" + params.to_s)
     setup(params)
     @is_valid = check(email, password)
     @errors.clear
@@ -29,15 +24,8 @@ class UserValidator
     add_email_password_match_error(@is_valid) if email_is_valid? && password_is_valid?
   end
 
-  def check(email, password)
-    email_is_valid? && password_is_valid? && @user_repository.check(email, password)
-  end
-
-  def user_does_not_exist?
-    email_is_valid? && @user_repository.find_by_email(@email).nil?
-  end
-
   def validate_registration(params)
+    @logger.debug("params:" + params.to_s)
     setup(params)
     @is_valid = email_is_valid? && password_is_valid? && first_name_is_valid? && last_name_is_valid? && user_does_not_exist?()
     @errors.clear
@@ -62,6 +50,22 @@ class UserValidator
   end
 
   private
+  def setup(params)
+    @email = params[:email]
+    @password = params[:password]
+    @first_name = params[:first_name]
+    @last_name = params[:last_name]
+    @is_valid = false
+  end
+
+  def check(email, password)
+    email_is_valid? && password_is_valid? && @user_repository.check(email, password)
+  end
+
+  def user_does_not_exist?
+    email_is_valid? && @user_repository.find_by_email(@email).nil?
+  end
+
   def add_email_password_match_error(match)
     @errors.merge!({:email => "Email and password do not match"}) if !match.nil? && !match
   end
