@@ -1,11 +1,13 @@
 require 'rubygems'
 require 'log4r'
+require 'uuid'
 require File.join(File.dirname(__FILE__), '..', 'model', 'order')
 
 class OrderValidator
   attr_accessor :errors
 
-  def initialize(logger = Log4r::Logger['MainLogger'])
+  def initialize(logger = Log4r::Logger['MainLogger'], uuid_generator = UUID.new)
+    @uuid_generator = uuid_generator
     @logger = logger
     @errors = {}
   end
@@ -14,7 +16,8 @@ class OrderValidator
     @logger.debug("Validating order")
     @errors.clear
     setup(params)
-    @is_valid = file_is_valid?
+    @is_valid = file_is_valid?    
+    @logger.debug("order valid=" + @is_valid.to_s)
   end
 
   def is_valid?
@@ -23,7 +26,7 @@ class OrderValidator
 
   def bind
     order = Order.new
-    order.file_id = Guid.new.to_s
+    order.file_id = @uuid_generator.generate
     order.file_name = @file_name
     order
   end
@@ -49,7 +52,7 @@ class OrderValidator
   end
 
   def is_psd?
-    @file_name.chomp(".psd").length() == @file_name.length() -4
+    @file_name.chomp(".psd").length == @file_name.length - 4
   end
 
 end

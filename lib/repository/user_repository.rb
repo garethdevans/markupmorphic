@@ -19,8 +19,8 @@ class UserRepository < Repository
       raise $!
     end
   end
-
-  def find_by_ema/il(email)
+                  
+  def find_by_email(email)
     begin
       @logger.debug("email:" + email)
       if user = get_single(User.by_email(:key => email, :database => @db))
@@ -51,9 +51,12 @@ class UserRepository < Repository
     begin
       @logger.debug("id:" + id)
       if user = User.get(id, @db)
-          user.database = @db
+        @logger.debug("found user with id:" + id)
+        user.database = @db
       end
       user
+    rescue RestClient::ResourceNotFound
+      nil
     rescue Exception => e
       @logger.error(e)
       raise $!

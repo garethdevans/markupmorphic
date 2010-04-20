@@ -41,7 +41,6 @@ class UserValidator
     user.password = @password
     user.first_name = @first_name
     user.last_name = @last_name
-    user.errors = @errors
     user
   end
 
