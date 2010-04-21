@@ -9,18 +9,25 @@ class OrderService
   end
 
   def create_order(order, user, user_file)
-    order = order_validator.bind
     order.user = user
     @order_repository.save(order)
-    open_file_store(file_store_location)
+    open_file_store
     File.open(file_to_save(order), 'wb') do |file|
       file.write(user_file.read)
     end
   end
 
+  def find_orders_for(user)    
+    @order_repository.find_by_user(user)
+  end
+
+  def find_all_orders
+    @order_repository.all_orders
+  end
+
   private
-  def open_file_store(file_store)
-    FileUtils.mkdir_p file_store unless File.exists?(file_store)
+  def open_file_store
+    FileUtils.mkdir_p file_store_location unless File.exists?(file_store_location)
   end
 
   def file_store_location
@@ -28,7 +35,7 @@ class OrderService
   end
 
   def file_to_save(order)
-    File.join(file_store_location, order.file_name)
+    File.join(file_store_location, order.file_id)
   end
 
 end

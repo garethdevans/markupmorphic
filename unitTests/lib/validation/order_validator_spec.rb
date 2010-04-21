@@ -6,8 +6,15 @@ describe OrderValidator do
 
   before :each do
     @logger = stub("logger")
-    @logger.should_receive(:debug)
-    @order_validator = OrderValidator.new(@logger)
+    @logger.should_receive(:debug).any_number_of_times
+    @uuid_generator = stub("uuid_generator")
+    @order_validator = OrderValidator.new(@logger, @uuid_generator)
+  end
+
+  it "should create new order with generated file id when bind called" do    
+    @uuid_generator.should_receive(:generate).and_return("file_id")
+    order = @order_validator.bind
+    order.file_id.should == "file_id"
   end
 
   it "should not be valid when file not present" do

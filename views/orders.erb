@@ -1,22 +1,29 @@
 <div>
 
   <table>
+
     <thead>
-        <th>
-          <td>File name</td>
-        </th>
+        <tr>
+          <th>File Name</th>
+          <th>Created</th>
+          <th>Status</th>
+        </tr>
     </thead>
+
     <tbody>
 <%
     @orders.each do |order|
 %>
         <tr>
             <td><%= order.file_name %></td>
+            <td><%= order.created_at %></td>
+            <td><%= order.status %></td>
         </tr>
 <%
     end
 %>
     </tbody>
+    
   </table>
 
 </div>

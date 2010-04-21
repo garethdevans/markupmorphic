@@ -4,12 +4,12 @@ require 'rack'
 
 use Rack::Session::Cookie, :key => 'rack.session',
                           :path => '/',
-                          :expire_after => 60 * 60 * 12, # In seconds
-                          :secret => 'change_me'
+                          :expire_after => 60 * 60 * 1, # In seconds
+                          :secret => 'open_sesame'
 
 FileUtils.mkdir_p 'log' unless File.exists?('log')
 log = File.new("log/sinatra.log", "a")
-$stdout.reopen(log)
+#$stdout.reopen(log)
 $stderr.reopen(log)
 
 

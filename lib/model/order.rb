@@ -7,6 +7,7 @@ class Order < CouchRest::ExtendedDocument
 
   property :file_id
   property :file_name  
+  property :status  
 
   def user= user
     self["user_id"] = user.id
