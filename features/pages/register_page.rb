@@ -9,8 +9,8 @@ class RegisterPage < Markupmorphic::Page
     browser.open(url('/user/create'))
   end
 
-  def register_button
-    button(:name, 'register')
+  def click_register_button
+    button(:name, 'register').click_wait
   end
 
 end

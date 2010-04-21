@@ -1,0 +1,22 @@
+<div>
+
+  <table>
+    <thead>
+        <th>
+          <td>File name</td>
+        </th>
+    </thead>
+    <tbody>
+<%
+    @orders.each do |order|
+%>
+        <tr>
+            <td><%= order.file_name %></td>
+        </tr>
+<%
+    end
+%>
+    </tbody>
+  </table>
+
+</div>

@@ -1,11 +1,11 @@
 <form method="post" action="/user/login">
 
 <%
-   if @user.errors.count > 0 then
+   if @errors && @errors.count > 0 then
 %>
         <ul>
 <%
-            @user.errors.each do |key, value|
+            @errors.each do |key, value|
 %>
                 <li><%= value %></li>
 <%

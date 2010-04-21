@@ -1,5 +1,22 @@
-<form id="upload_psd" method="post" action="/upload/psd">
-    <input type="hidden" name="MAX_FILE_SIZE" value="1000" />
-    <input type="file" />
-    <input type="submit" value="Upload" />
+<form id="upload_psd" method="post" action="/order/create" enctype='multipart/form-data'>
+
+<%
+   if @errors && @errors.count > 0 then
+%>
+        <ul>
+<%
+            @errors.each do |key, value|
+%>
+                <li><%= value %></li>
+<%
+            end
+%>
+        </ul>
+<%
+    end
+%>
+
+    <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+    <input type="file" name="file" />
+    <input type="submit" name="upload" value="Upload" />
 </form>

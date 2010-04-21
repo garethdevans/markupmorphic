@@ -28,7 +28,7 @@ Given /^I fill in '(.*)' for '(.*)'$/ do |value, field|
 end
 
 When /^I hit register$/ do
-  @register_page.register_button.click_wait
+  @register_page.click_register_button
 end
 
 Then /^I should see '(.*)'$/ do |text|
@@ -40,5 +40,5 @@ When /^I click the link '(.*)'$/ do |name|
 end
 
 When /^I hit 'login'$/ do
-  @home_page.login_button.click_wait
+  @home_page.click_login_button
 end

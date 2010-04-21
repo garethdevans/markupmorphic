@@ -1,9 +1,9 @@
-Feature: User
+Feature: Login
   In order to use the system
   As a normal user
   I want to be able to create a new user and login
 
-  Scenario: Create a new user                    
+  Scenario: Create a new user
     Given The system is setup
     And I visit the register page
     And I fill in 'Bob' for 'first_name'
@@ -21,5 +21,13 @@ Feature: User
     And I fill in 'password' for 'password'
     When I hit 'login'
     Then I should see 'Sign out'
+    And I click the link 'Sign out'
 
+  Scenario: Login fails for existing user when password wrong
+    Given User id exists for 'bob.smith@lotsofmoney.com'
+    And I visit the home page
+    And I fill in 'bob.smith@lotsofmoney.com' for 'email'
+    And I fill in 'wrong_password' for 'password'
+    When I hit 'login'
+    Then I should see 'Email and password do not match'
 
